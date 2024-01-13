@@ -841,7 +841,7 @@ main section {
     height: 160px;
     border-radius: 16px;
     background-color: var(--secondary-color);
-    background-image: url('/Assets/Thumbnail/To\ do\ list\ thumbnail.webp');
+    background-image: url('./Assets/Thumbnail/To\ do\ list\ thumbnail.webp');
     background-position: center;
     background-size: cover;
 }
@@ -954,7 +954,7 @@ main section {
     height: 160px;
     border-radius: 16px;
     background-color: var(--secondary-color);
-    background-image: url('/Assets/Thumbnail/Note.webp');
+    background-image: url('./Assets/Thumbnail/Note.webp');
     background-position: center;
     background-size: cover;
 }
@@ -1063,7 +1063,7 @@ main section {
     height: 160px;
     border-radius: 16px;
     background-color: var(--secondary-color);
-    background-image: url('/Assets/Thumbnail/Clock\ display.webp');
+    background-image: url('./Assets/Thumbnail/Clock\ display.webp');
     background-position: center;
     background-size: cover;
 }
@@ -1359,7 +1359,7 @@ main section {
 
 .background-side-ad {
     height: 100%;
-    background-image: url('/Assets/fluid-gradinet-background/pawel-czerwinski-9mHJM_1GU1E-unsplash.jpg');
+    background-image: url('./Assets/fluid-gradinet-background/pawel-czerwinski-9mHJM_1GU1E-unsplash.jpg');
     background-size: cover;
     border-radius: 8px;
 }
