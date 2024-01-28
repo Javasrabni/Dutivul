@@ -72,6 +72,10 @@ a {
     --Black-fourth-color: #3e3e42;
 }
 
+:root {
+    --Gray-text-color-Main: #64748b;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 4px;
@@ -268,10 +272,6 @@ aside>section:nth-child(2) {
     color: var(--fourth-color);
 }
 
-#LainnyaNight.ActiveNight {
-    color: var(--fourth-color);
-}
-
 @media screen and (max-width:500px) {
     #ListToolsNight1 {
         font-size: 13px;
@@ -283,14 +283,14 @@ aside>section:nth-child(2) {
     }
 
     #masukanNight {
-        color: var(--Black-primary-color);
+        color: var(--Gray-text-color-Main);
         border-radius: 8px;
         margin-top: 4px;
         font-size: 13px;
     }
 
     #Setting-List {
-        color: var(--Black-primary-color);
+        color: var(--Gray-text-color-Main);
         border-radius: 8px;
         margin-top: 4px;
         font-size: 13px;
@@ -346,7 +346,7 @@ aside>section:nth-child(2) {
     justify-content: end;
     flex-direction: row;
     font-size: 12px;
-    color: rgb(78, 78, 78);
+    color: var(--Gray-text-color-Main);
     font-weight: 600;
 }
 
@@ -355,7 +355,7 @@ aside>section:nth-child(2) {
     font-size: 10px;
     font-weight: light;
     margin-right: 32px;
-    border-right: 1px solid var(--fourth-color);
+    border-right: 1px solid var(--Gray-text-color-Main);
 }
 
 .Version p:nth-child(2) {
@@ -370,7 +370,7 @@ aside>section:nth-child(2) {
 @media screen and (max-width: 500px) {
     .Version p:nth-child(1) {
         margin-right: 32px;
-        border-right: 1px solid var(--Black-fourth-color);
+        border-right: 1px solid var(--Gray-text-color-Main);
     }
 
     .Version p:nth-child(1) {
@@ -394,7 +394,17 @@ aside>section:nth-child(2) {
     width: 100%;
     /* margin-top: 34px; */
     cursor: pointer;
-    margin-top: 52px;
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 500px) {
+    .List-tools {
+        margin-top: 12px;
+    }
+}
+
+.List-tools.ActiveNight {
+    color: var(--fourth-color);
 }
 
 .List-tools ul li {
@@ -450,6 +460,7 @@ aside>section:nth-child(2) {
 .lainnya-type-1 {
     margin-top: -8px;
     padding: 0px;
+
 }
 
 @media screen and (max-width: 500px) {
@@ -471,7 +482,7 @@ aside>section:nth-child(2) {
 
 #icon-Lainnya {
     font-size: 17px;
-    color: var(--Black-Thrid-color);
+    color: var(--Gray-text-color-Main);
 }
 
 #icon-Lainnya.ActiveNight {
@@ -488,7 +499,7 @@ aside>section:nth-child(2) {
 
     #icon-Lainnya {
         font-size: 15px;
-        color: var(--Black-Thrid-color);
+        color: var(--Black-Thrid);
     }
 
 }
@@ -554,27 +565,16 @@ aside>section:nth-child(2) {
     color: var(--fourth-color);
 }
 
-#SearchTools {
+/* #SearchTools {
     display: flex;
     flex-direction: row;
-}
+} */
 
-.inputSearch {
-    /* --primary */
-    background-color: var(--third-color);
-    height: 33px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    margin-bottom: 8px;
-    width: 100%;
-}
 
-#SearchTools i {
+/* #SearchTools i {
     margin-left: 4px;
     color: var(--fourth-color);
-}
+} */
 
 @media screen and (min-width:500px) {
     .inputSearch {
@@ -805,7 +805,13 @@ main section {
     padding: 12px 0px 16px 0px;
     width: 100%;
     overflow-x: scroll;
-    margin-bottom: 36px;
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+    .tools-list {
+        margin-bottom: 32px;
+    }
 }
 
 .tools-list .wrapper-tools {
@@ -1063,7 +1069,7 @@ main section {
     height: 160px;
     border-radius: 16px;
     background-color: var(--secondary-color);
-    background-image: url('./Assets/Thumbnail/Clock\ display.webp');
+    background-image: url('./Assets/Thumbnail/Clockdisplay.webp');
     background-position: center;
     background-size: cover;
 }
@@ -1150,6 +1156,17 @@ main section {
 
 .Lainnya-tools {
     display: none;
+    user-select: none;
+}
+
+#Lainnya {
+    font-weight: 600;
+    color: #64748b;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#catatanPengeluaran.ActiveNight {
+    color: var(--fourth-color);
 }
 
 .tools-main-page {
@@ -1568,12 +1585,19 @@ main section {
 }
 
 .SearchEngine {
+    margin-top: -12px;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 76px;
     padding: 16px 0px;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 500px) {
+    .SearchEngine {
+        margin-top: -12px;
+    }
 }
 
 /* dark mode active */
@@ -1595,7 +1619,7 @@ main section {
     color: var(--secondary-color);
 }
 
-.Box-searchEng {
+#Box-searchEng {
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -1612,7 +1636,8 @@ main section {
 }
 
 .icon-search-eng {
-    width: 50px;
+    width: 30px;
+    margin-right: 8px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -1852,6 +1877,12 @@ main section {
 
 #wrapper-budgetiv.ActiveNight {
     background-color: var(--Black-secondary-color);
+}
+
+@media screen and (max-width: 900px) {
+    #wrapper-budgetiv.ActiveNight {
+        background-color: var(--Black-Thrid-color);
+    }
 }
 
 #title-Budgetiv.ActiveNight {
