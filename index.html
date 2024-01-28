@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4607477708680112"
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-4607477708680112">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="style.css">
@@ -14,6 +17,7 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="svg" href="./Assets/Img assets/star.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -63,9 +67,6 @@
             </ul>
         </div>
     </section> -->
-
-
-
 
     <section class="tools-list-NeoDisplay" id="Display-lihatSemua">
         <div class="Arrow-back-DisplayLihatSemua">
@@ -152,19 +153,32 @@
 
             <div id="SearchTools">
                 <div class="inputSearch" id="inputSearchNight">
-                    <i class="fa-solid fa-magnifying-glass fa-xs"></i>
-                    <input type="text" id="inputSearch" placeholder="cth: catatan" maxlength="27">
+
+
+                    <section class="SearchEngine">
+                        <div id="Box-searchEng">
+
+                            <div class="icon-search-eng">
+                                <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+                            </div>
+                            <div class="content-inputBox-SEng">
+                                <input type="text" placeholder="Cari cepat" id="InputSe">
+                                <button id="button-SE">Search</button>
+                            </div>
+
+                        </div>
+                        <p id="ErrorMessageSE"></p>
+                    </section>
+
+
+                    <!-- <i class="fa-solid fa-magnifying-glass fa-xs"></i> -->
+                    <!-- <input type="text" id="inputSearch" placeholder="cth: catatan" maxlength="27"> -->
                 </div>
                 <div id="button-search"></div>
             </div>
-            <div class="List-tools">
+            <div class="List-tools" id="ListToolsActiveNight">
                 <ul class="Type-1">
                     <!-- <p>Alat-alat</p> -->
-
-                    <li id="ListToolsNgntot"><span class="material-symbols-outlined" style="margin-right: 12px;">
-                            home
-                        </span>Home
-                    </li>
 
                     <li id="ListToolsNight1"><i class="fa-regular fa-note-sticky fa-lg"></i>Note / catatan pribadi
                     </li>
@@ -178,7 +192,8 @@
 
                         <p style="font-size: 14px;" id="ListToolsNight3">Keuangan</p>
                         <a href="#">
-                            <li><i class="fa-regular fa-money-bill-1 fa-lg"></i>Catatan pengeluaran</li>
+                            <li id="catatanPengeluaran"><i class="fa-regular fa-money-bill-1 fa-lg"></i>Catatan
+                                pengeluaran</li>
                         </a>
 
                         <a href="#">
@@ -205,7 +220,7 @@
                     <a href="#"><li>Asyncs_</li></a>
                 </ul> -->
 
-                <ul class="Type-4">
+                <ul class="Type-4" id="Type-4">
 
                     <li id="Setting-List">Setting</li>
 
@@ -282,7 +297,7 @@
                         <section>
                             <h1 id="HeadTodoNight">To-do list</h1>
                             <p id="ParagTodoNight">Buat daftar aktifitas harian, supaya semua tersusun rapih.</p>
-                            <button>Mulai tulis</button>
+                            <button onclick="functionbtntodo()">Mulai tulis</button>
                         </section>
                     </div>
 
@@ -292,7 +307,7 @@
                         <section>
                             <h1 id="HeadNoteNight">Note / catatan</h1>
                             <p id="ParagNoteNight">Catat semua hal yang kamu ingin simpan, dijamin aman.</p>
-                            <button>Mulai catat</button>
+                            <button onclick="functionNote()">Mulai catat</button>
                         </section>
                     </div>
 
@@ -308,7 +323,6 @@
                         <div>
                             <button id="buttonBudgetiv"><a href="http://manageurexpense.rf.gd/?i=1" target="_blank"
                                     id="a-budgetiv">Link</a></button>
-                            <p>*Not available</p>
                         </div>
                     </div>
                     <div>
@@ -317,27 +331,7 @@
                 </div>
             </section>
 
-            <div class="Heading-main" id="Heading-main">
-                <p id="judul-Section-3">Demo Search engine (Maintenance)</p>
-                <!-- <div class="seeAll">
-                    <p>Lihat semua</p>
-                </div> -->
-            </div>
 
-            <section class="SearchEngine">
-                <div class="Box-searchEng" id="Box-searchEng">
-
-                    <div class="icon-search-eng">
-                        <i class="fa-solid fa-magnifying-glass fa-xs"></i>
-                    </div>
-                    <div class="content-inputBox-SEng">
-                        <input type="text" placeholder="Cari cepat" id="InputSe">
-                        <button id="button-SE">Search</button>
-                    </div>
-
-                </div>
-                <p id="ErrorMessageSE"></p>
-            </section>
 
 
             <!-- <div class="Heading-main" id="Heading-main" >
@@ -348,8 +342,8 @@
             </div>
 
 
-            <p style="margin-top: 16px; font-size: 12px; text-decoration: line-through;" id="testingjurnal">Jurnal
-                Harian: Alat Ampuh untuk Self-Reflection</p>
+            <!-- <p style="margin-top: 16px; font-size: 12px; text-decoration: line-through;" id="testingjurnal">Jurnal
+                Harian: Alat Ampuh untuk Self-Reflection</p> -->
 
         </section>
 

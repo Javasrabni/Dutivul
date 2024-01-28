@@ -1,8 +1,8 @@
 document.title = "Dutivul";
 
-const DivSearchTools = document.getElementById('SearchTools');
-const InputSearchTools = document.getElementById('inputSearch');
-InputSearchTools.classList.add('inputSearchTools');
+// const DivSearchTools = document.getElementById('SearchTools');
+// const InputSearchTools = document.getElementById('inputSearch');
+// InputSearchTools.classList.add('inputSearchTools');
 
 // !! Lainnya tap
 const LainnyaTools = document.getElementById('Lainnya-tools');
@@ -25,6 +25,7 @@ ButtonLainnya.addEventListener('click', () => {
     ButtonLainnya.innerHTML = baliknama;
   }
 });
+
 const popupType1 = document.getElementById('popup-type1');
 const closeType1 = document.getElementById('close-popup');
 
@@ -37,9 +38,9 @@ const closeType1 = document.getElementById('close-popup');
 //   }
 // };
 
-closeType1.addEventListener('click', () => {
-  popupType1.style.display = "none";
-});
+// closeType1.addEventListener('click', () => {
+//   popupType1.style.display = "none";
+// });
 
 // Variabel
 const Main = document.getElementById('main')
@@ -246,7 +247,7 @@ addEventListener('load', () => {
 
 let content = document.getElementsByTagName('body')[0];
 let DarkMode = document.getElementById('dark-change');
-let inputSearchAside = document.getElementById('inputSearchNight');
+// let inputSearchAside = document.getElementById('inputSearchNight');
 let aside = document.getElementsByTagName('aside');
 let NavSticky = document.getElementById('Nav-Sticky');
 let DarkBannerBackground = document.getElementById('dark-background');
@@ -286,6 +287,8 @@ let SettingMenu = document.getElementById('Setting-List');
 let Lainnya = document.getElementById('Lainnya');
 let IconLainnya = document.getElementById('icon-Lainnya');
 
+let ListToolsActiveNight = document.getElementById('ListToolsActiveNight')
+
 // (Lihat semua, Featured tools)
 let focusAreaDisplay = document.getElementById('focusAreaDisplay');
 let HeadClockNightDisplay = document.getElementById('HeadClockNightDisplay');
@@ -299,13 +302,14 @@ let catatanDisplay = document.getElementById('catatanDisplay');
 let HeadNoteNightDisplay = document.getElementById('HeadNoteNightDisplay');
 let ParagNoteNightDisplay = document.getElementById('ParagNoteNightDisplay');
 
+let catatanPengeluaran = document.getElementById("catatanPengeluaran");
+
 // Search Engine
 let BoxSearchSE = document.getElementById('Box-searchEng');
 let ButtonSE = document.getElementById('button-SE');
 let InputSE = document.getElementById('InputSe');
 
 let judulSection3 = document.getElementById('judul-Section-3');
-let testingjurnal = document.getElementById('testingjurnal');
 
 // remove Heading card
 const cardTodoMobile = window.matchMedia(' (max-width: 500px) ');
@@ -318,7 +322,7 @@ if (cardTodoMobile.matches) {
 // Dark mode btn
 DarkMode.addEventListener('click', () => {
   DarkMode.classList.toggle('active'); content.classList.toggle('night');
-  Nav.classList.toggle('ActiveNight'); inputSearchAside.classList.toggle('ActiveNight');
+  Nav.classList.toggle('ActiveNight');
   NavSticky.classList.toggle('ActiveNight'); DarkBannerBackground.classList.toggle('ActiveNight'); HeadingMain.classList.toggle('ActiveNight');
   CloseNav.classList.toggle('ActiveNight'); Logo.classList.toggle('ActiveNight');
   ListAside1.classList.toggle('ActiveNight'); ListAside2.classList.toggle('ActiveNight');
@@ -328,7 +332,7 @@ DarkMode.addEventListener('click', () => {
   HeadTodoNight.classList.toggle('ActiveNight'); ParagTodoNight.classList.toggle('ActiveNight'); HeadNoteNight.classList.toggle('ActiveNight'); ParagNoteNight.classList.toggle('ActiveNight'); masukanNight.classList.toggle('ActiveNight');
   versionNight.classList.toggle('ActiveNight'); Lainnya.classList.toggle('ActiveNight');
   IconLainnya.classList.toggle('ActiveNight'); SettingMenu.classList.toggle("ActiveNight");
-  focusAreaDisplay.classList.toggle('ActiveNight'); HeadClockNightDisplay.classList.toggle('ActiveNight'); ParagClockNightDisplay.classList.toggle('ActiveNight'); todoListDisplay.classList.toggle("ActiveNight"); HeadTodoNightDisplay.classList.toggle('ActiveNight'); ParagTodoNightDisplay.classList.toggle("ActiveNight"); catatanDisplay.classList.toggle("ActiveNight"); HeadNoteNightDisplay.classList.toggle('ActiveNight'); ParagNoteNightDisplay.classList.toggle("ActiveNight"); judulSection3.classList.toggle('ActiveNight'); testingjurnal.classList.toggle('ActiveNight'); BoxSearchSE.classList.toggle("ActiveNight"); ButtonSE.classList.toggle('ActiveNight'); InputSE.classList.toggle('ActiveNight'); wrapperBudgetiv.classList.toggle('ActiveNight'); titleBudgetiv.classList.toggle('ActiveNight'); paragBudgetiv.classList.toggle('ActiveNight'); buttonBudgetiv.classList.toggle("ActiveNight"); AnchorBudgetiv.classList.toggle("ActiveNight");
+  focusAreaDisplay.classList.toggle('ActiveNight'); HeadClockNightDisplay.classList.toggle('ActiveNight'); ParagClockNightDisplay.classList.toggle('ActiveNight'); todoListDisplay.classList.toggle("ActiveNight"); HeadTodoNightDisplay.classList.toggle('ActiveNight'); ParagTodoNightDisplay.classList.toggle("ActiveNight"); catatanDisplay.classList.toggle("ActiveNight"); HeadNoteNightDisplay.classList.toggle('ActiveNight'); ParagNoteNightDisplay.classList.toggle("ActiveNight"); judulSection3.classList.toggle('ActiveNight'); BoxSearchSE.classList.toggle("ActiveNight"); ButtonSE.classList.toggle('ActiveNight'); InputSE.classList.toggle('ActiveNight'); wrapperBudgetiv.classList.toggle('ActiveNight'); titleBudgetiv.classList.toggle('ActiveNight'); paragBudgetiv.classList.toggle('ActiveNight'); buttonBudgetiv.classList.toggle("ActiveNight"); AnchorBudgetiv.classList.toggle("ActiveNight"); catatanPengeluaran.classList.toggle('ActiveNight');
 });
 
 let darkModeAbsolute = matchMedia(' (min-width: 900px) ');
@@ -337,7 +341,7 @@ if (darkModeAbsolute.matches) {
   // Dark mode btn
   window.addEventListener('pageshow', () => {
     DarkMode.classList.toggle('active'); content.classList.toggle('night');
-    Nav.classList.toggle('ActiveNight'); inputSearchAside.classList.toggle('ActiveNight');
+    Nav.classList.toggle('ActiveNight');
     NavSticky.classList.toggle('ActiveNight'); DarkBannerBackground.classList.toggle('ActiveNight'); HeadingMain.classList.toggle('ActiveNight');
     CloseNav.classList.toggle('ActiveNight'); Logo.classList.toggle('ActiveNight');
     ListAside1.classList.toggle('ActiveNight'); ListAside2.classList.toggle('ActiveNight');
@@ -347,7 +351,7 @@ if (darkModeAbsolute.matches) {
     HeadTodoNight.classList.toggle('ActiveNight'); ParagTodoNight.classList.toggle('ActiveNight'); HeadNoteNight.classList.toggle('ActiveNight'); ParagNoteNight.classList.toggle('ActiveNight'); masukanNight.classList.toggle('ActiveNight');
     versionNight.classList.toggle('ActiveNight'); Lainnya.classList.toggle('ActiveNight');
     IconLainnya.classList.toggle('ActiveNight'); SettingMenu.classList.toggle("ActiveNight");
-    focusAreaDisplay.classList.toggle('ActiveNight'); HeadClockNightDisplay.classList.toggle('ActiveNight'); ParagClockNightDisplay.classList.toggle('ActiveNight'); todoListDisplay.classList.toggle("ActiveNight"); HeadTodoNightDisplay.classList.toggle('ActiveNight'); ParagTodoNightDisplay.classList.toggle("ActiveNight"); catatanDisplay.classList.toggle("ActiveNight"); HeadNoteNightDisplay.classList.toggle('ActiveNight'); ParagNoteNightDisplay.classList.toggle("ActiveNight"); judulSection3.classList.toggle('ActiveNight'); testingjurnal.classList.toggle('ActiveNight'); BoxSearchSE.classList.toggle("ActiveNight"); ButtonSE.classList.toggle('ActiveNight'); InputSE.classList.toggle('ActiveNight'); wrapperBudgetiv.classList.toggle('ActiveNight'); titleBudgetiv.classList.toggle('ActiveNight'); paragBudgetiv.classList.toggle('ActiveNight');
+    focusAreaDisplay.classList.toggle('ActiveNight'); HeadClockNightDisplay.classList.toggle('ActiveNight'); ParagClockNightDisplay.classList.toggle('ActiveNight'); todoListDisplay.classList.toggle("ActiveNight"); HeadTodoNightDisplay.classList.toggle('ActiveNight'); ParagTodoNightDisplay.classList.toggle("ActiveNight"); catatanDisplay.classList.toggle("ActiveNight"); HeadNoteNightDisplay.classList.toggle('ActiveNight'); ParagNoteNightDisplay.classList.toggle("ActiveNight"); judulSection3.classList.toggle('ActiveNight'); BoxSearchSE.classList.toggle("ActiveNight"); ButtonSE.classList.toggle('ActiveNight'); InputSE.classList.toggle('ActiveNight'); wrapperBudgetiv.classList.toggle('ActiveNight'); titleBudgetiv.classList.toggle('ActiveNight'); paragBudgetiv.classList.toggle('ActiveNight');
   });
 }
 
@@ -415,4 +419,28 @@ function TypingFuncSE() {
   BoxSearchSE.classList.remove("BoxSearchSE-error-search");
 }
 
-InputSE.addEventListener('input', TypingFuncSE)
+InputSE.addEventListener('input', TypingFuncSE);
+
+// Button card tools link
+function functionbtntodo() {
+  window.open('http://zavado.rf.gd/?i=1', "_blank");
+};
+
+function functionNote() {
+  window.open('http://zavado.rf.gd/index6not/note.html', "_blank");
+};
+
+// let tesProm = prompt("Tuliskan nama sekolah");
+// tesProm = tesProm.toLowerCase();
+
+// switch(tesProm){
+//   case "man 1 kota tangerang":
+//     alert("Lokasi: Cimone");
+//     break;
+//   case "sman 8 kota tangerang":
+//     alert("lokasi: Jl. besi raya");
+//     break;
+//   default: 
+//     alert("invalid data");
+//     break;
+// }
